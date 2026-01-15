@@ -86,7 +86,7 @@ export function Footer() {
       <section className="bg-[#1a1a1a] text-white">
         <div className="px-6 md:px-12 lg:px-16">
           {/* Main Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-0 mb-16">
             {/* Left Column - Nav Menu & Social */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ export function Footer() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="lg:px-12"
             >
-              <p className="text-white/80 text-xl text-center mb-6 max-w-xs mx-auto tracking-tighter">
+              <p className="text-white/80 text-xl md:text-center mb-6 max-w-xs mx-auto tracking-tighter">
                 {footer.newsletter.description}
               </p>
 

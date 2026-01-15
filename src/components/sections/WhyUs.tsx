@@ -91,7 +91,7 @@ export function WhyUs() {
           </motion.div>
 
           {/* Right - 2x2 Stats Grid */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid md:grid-cols-2 gap-3">
             {whyUs.stats.map((stat, index) => {
               const Icon = iconMap[stat.icon] || Award;
               return (

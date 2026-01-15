@@ -122,7 +122,7 @@ export function Navbar() {
               transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="fixed top-0 right-0 bottom-0 z-50 w-full sm:w-[480px] bg-[#1a1a1a] overflow-y-auto"
             >
-              <div className="flex flex-col min-h-full p-8 md:p-12">
+              <div className="flex flex-col min-h-full p-8">
                 {/* Close Button */}
                 <motion.button
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -186,24 +186,6 @@ export function Navbar() {
                       >
                         {navbar.contact.phone}
                       </a>
-                    </div>
-                  </div>
-
-                  {/* Socials */}
-                  <div>
-                    <p className="text-sm text-white/40 mb-3">Socials</p>
-                    <div className="space-y-1">
-                      {navbar.socialLinks.map((social) => (
-                        <a
-                          key={social.name}
-                          href={social.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block text-white/70 hover:text-primary transition-colors text-sm underline underline-offset-2"
-                        >
-                          {social.name === "Twitter" ? "X / Twitter" : social.name}
-                        </a>
-                      ))}
                     </div>
                   </div>
                 </motion.div>

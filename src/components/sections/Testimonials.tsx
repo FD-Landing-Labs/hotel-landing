@@ -43,7 +43,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col justify-between min-h-[400px]"
+            className="flex flex-col justify-between md:min-h-[400px]"
           >
             <div>
               {/* Section Label */}
