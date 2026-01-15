@@ -31,6 +31,11 @@
   "navbar": {
     "brandName": "Grandeur",
     "brandMark": "",
+    "logo": {
+      "default": "/assets/images/logo.png",
+      "white": "https://placehold.co/140x50/ffffff/1a1a1a?text=GRANDEUR",
+      "alt": "Grandeur Luxury Hotel Logo"
+    },
     "barLinks": [
       {
         "name": "About",
@@ -304,7 +309,7 @@
       "label": "Award-winning excellence",
       "headline": "50k+ guests choose our trusted luxury hotels",
       "description": "Choosing us matters — experience and personalized service shape every memorable stay. We help guests create unforgettable moments with confidence.",
-      "image": "https://placehold.co/800x900/1a1a1a/c9a962?text=Concierge"
+      "image": "/assets/images/front.png"
     },
     "stats": [
       {
@@ -342,7 +347,7 @@
         "id": "dubai",
         "city": "Dubai",
         "country": "United Arab Emirates",
-        "image": "https://placehold.co/600x800/1a1a1a/c9a962?text=Dubai",
+        "image": "/assets/images/cities/dubai.jpg",
         "description": "Rising majestically on the Palm, offering unrivaled views of the Arabian Gulf.",
         "rooms": 320,
         "rating": 4.9
@@ -351,7 +356,7 @@
         "id": "paris",
         "city": "Paris",
         "country": "France",
-        "image": "https://placehold.co/600x800/1a1a1a/c9a962?text=Paris",
+        "image": "/assets/images/cities/paris.jpg",
         "description": "A Haussmanian gem steps from the Champs-Elysees, embodying French elegance.",
         "rooms": 180,
         "rating": 4.8
@@ -360,7 +365,7 @@
         "id": "new-york",
         "city": "New York",
         "country": "United States",
-        "image": "https://placehold.co/600x800/1a1a1a/c9a962?text=New+York",
+        "image": "/assets/images/cities/ny.jpg",
         "description": "An iconic Manhattan landmark overlooking Central Park's lush landscapes.",
         "rooms": 250,
         "rating": 4.9
@@ -369,7 +374,7 @@
         "id": "tokyo",
         "city": "Tokyo",
         "country": "Japan",
-        "image": "https://placehold.co/600x800/1a1a1a/c9a962?text=Tokyo",
+        "image": "/assets/images/cities/tokyo.jpg",
         "description": "Where traditional Japanese hospitality meets contemporary luxury.",
         "rooms": 200,
         "rating": 4.9
@@ -394,28 +399,28 @@
         "name": "Maria Thompson",
         "role": "Frequent Guest",
         "quote": "Grandeur made our anniversary celebration incredibly special. Their attention to detail, responsiveness, and personalized service helped us create memories that will last forever.",
-        "avatar": "https://placehold.co/100x100/e8d5c4/1a1a1a?text=MT"
+        "avatar": "/assets/images/avatar/1.jpg"
       },
       {
         "id": "testimonial-2",
         "name": "Brian Ruiz",
         "role": "First-time Guest",
         "quote": "We felt supported through every step. Clear communication, quick responses, and genuine care made our entire stay smooth and stress-free.",
-        "avatar": "https://placehold.co/100x100/6b6b6b/ffffff?text=BR"
+        "avatar": "/assets/images/avatar/2.jpg"
       },
       {
         "id": "testimonial-3",
         "name": "Sarah Mitchell",
         "role": "Business Traveler",
         "quote": "The business facilities are exceptional. From the meeting rooms to the high-speed WiFi, everything was perfectly suited for productive work trips.",
-        "avatar": "https://placehold.co/100x100/c9a962/1a1a1a?text=SM"
+        "avatar": "/assets/images/avatar/3.jpg"
       },
       {
         "id": "testimonial-4",
         "name": "David Chen",
         "role": "Family Vacation",
         "quote": "Traveling with kids can be challenging, but Grandeur made it effortless. The staff went above and beyond to ensure our whole family felt welcome.",
-        "avatar": "https://placehold.co/100x100/1a1a1a/c9a962?text=DC"
+        "avatar": "/assets/images/avatar/4.jpg"
       }
     ]
   },
@@ -450,7 +455,7 @@
       }
     ],
     "contactCard": {
-      "image": "https://placehold.co/200x200/e8d5c4/1a1a1a?text=Concierge",
+      "image": "/assets/images/faq.jpg",
       "text": "Have more questions? Our team is happy to help.",
       "cta": {
         "label": "Get in touch",
@@ -465,7 +470,7 @@
       "subtitle": "Ready to experience luxury? Our concierge team is here to help",
       "buttonLabel": "Get in touch",
       "buttonHref": "mailto:reservations@grandeur.com",
-      "backgroundImage": "https://placehold.co/1920x600/1a1a1a/c9a962?text=Luxury+Hotel+Exterior"
+      "backgroundImage": "/assets/images/footer.jpg"
     },
     "brand": {
       "name": "Grandeur"
