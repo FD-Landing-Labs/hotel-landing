@@ -20,7 +20,7 @@ export function FeaturedPlace() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="font-heading text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight"
+          className="font-body capitalize text-6xl font-medium tracking-tighter"
         >
           {featuredPlace.headline}
         </motion.h2>
@@ -29,7 +29,7 @@ export function FeaturedPlace() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="mt-4 text-muted-foreground"
+          className="mt-4 text-muted-foreground tracking-tighter"
         >
           {featuredPlace.subtitle}
         </motion.p>
@@ -99,47 +99,47 @@ function PlaceCard({ place, index, totalCards }: PlaceCardProps) {
           delay: index * 0.1,
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
-        className="bg-white rounded-2xl overflow-hidden shadow-lg shadow-black/5 border border-border/30"
+        className="bg-gray-50 border-6 border-white rounded-[2rem] overflow-hidden shadow-lg shadow-black/5"
       >
-        <div className="grid md:grid-cols-2 gap-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
           {/* Left Column - Content */}
           <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-between order-2 md:order-1">
             <div className="space-y-4">
               {/* Title */}
-              <h3 className="font-heading text-2xl md:text-3xl font-normal">
+              <h3 className="font-body capitalize text-2xl md:text-3xl font-semibold tracking-tighter">
                 {place.title}
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-md">
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-md tracking-tighter">
                 {place.description}
               </p>
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-4 mt-8 pt-8 border-t border-border/50">
+            <div className="flex flex-wrap gap-4 mt-8 pt-8">
               {/* Size Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
                 <LayoutGrid className="w-4 h-4" strokeWidth={1.5} />
-                <span>{place.size}</span>
+                <span className="tracking-tighter">{place.size}</span>
               </div>
 
               {/* Type Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
                 <Bed className="w-4 h-4" strokeWidth={1.5} />
-                <span>{place.type}</span>
+                <span className="tracking-tighter">{place.type}</span>
               </div>
 
               {/* Style Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
                 <Heart className="w-4 h-4" strokeWidth={1.5} />
-                <span>{place.style}</span>
+                <span className="tracking-tighter">{place.style}</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[400px] order-1 md:order-2">
+          <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[500px] order-1 md:order-2 lg:col-span-2">
             <Image
               src={place.image}
               alt={place.title}
