@@ -49,7 +49,7 @@ export function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 max-w-lg mx-auto"
+        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 max-w-md mx-auto"
       >
         <nav
           className={cn(
@@ -65,7 +65,7 @@ export function Navbar() {
               viewBox="0 0 40 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="text-foreground"
+              className="text-primary"
             >
               <path
                 d="M8 6C8 6 4 10 4 12C4 14 6 16 8 16C10 16 12 14 12 12C12 10 10 8 12 6C14 4 18 4 20 6C22 8 20 12 20 12C20 12 18 16 20 18C22 20 26 20 28 18C30 16 28 12 28 12C28 12 26 8 28 6C30 4 34 4 36 6"

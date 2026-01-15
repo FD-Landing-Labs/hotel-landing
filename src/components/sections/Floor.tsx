@@ -14,7 +14,7 @@ export function Floor() {
   const [activeRoom, setActiveRoom] = useState(floor.rooms[0]);
 
   return (
-    <section id="floor" className="relative bg-muted/30 py-20 md:py-28 lg:py-32">
+    <section id="floor" className="relative bg-muted/30 py-20 md:py-28">
       <div className="container px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <motion.div
@@ -24,43 +24,41 @@ export function Floor() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-12 md:mb-16"
         >
-          {/* Section Label with Line */}
-          <div className="flex items-center gap-4 mb-6">
-            <span className="text-sm text-muted-foreground">
+          <div className="flex items-center justify-start gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs text-black/50 tracking-widest uppercase">
               {floor.sectionLabel}
             </span>
-            <div className="flex-1 h-px bg-border" />
           </div>
-
           {/* Headline */}
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight max-w-3xl">
+          <h2 className="font-body text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tighter capitalize max-w-3xl">
             {floor.headline}
           </h2>
         </motion.div>
 
         {/* Main Content - Three Columns */}
-        <div className="bg-white rounded-2xl p-6 md:p-8 lg:p-10 shadow-sm border border-border/30">
-          <div className="grid lg:grid-cols-[280px_1fr_1fr] gap-8 lg:gap-10">
+        <div className="bg-white rounded-2xl p-3 shadow-sm border border-border/30">
+          <div className="grid lg:grid-cols-[280px_1fr_1fr] gap-3">
             {/* Left Column - Room Tabs */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0"
+              className="grid grid-cols-1 gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0"
             >
               {floor.rooms.map((room) => (
                 <button
                   key={room.id}
                   onClick={() => setActiveRoom(room)}
                   className={cn(
-                    "flex items-center justify-between gap-4 px-5 py-4 rounded-lg text-left transition-all duration-200 min-w-[160px] lg:min-w-0",
+                    "flex items-start justify-between gap-4 px-5 py-4 rounded-lg text-left transition-all duration-200 min-w-[160px] lg:min-w-0",
                     activeRoom.id === room.id
-                      ? "bg-foreground text-background"
+                      ? "bg-primary text-background"
                       : "bg-muted/50 text-foreground hover:bg-muted"
                   )}
                 >
-                  <span className="font-medium text-sm whitespace-nowrap">
+                  <span className="font-medium text-xl tracking-tighter whitespace-nowrap">
                     {room.name}
                   </span>
                   <ArrowRight
@@ -88,7 +86,7 @@ export function Floor() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.3 }}
-                  className="relative aspect-[4/5] rounded-xl overflow-hidden bg-muted"
+                  className="relative aspect-square rounded-xl overflow-hidden bg-muted"
                 >
                   <Image
                     src={activeRoom.image}
@@ -106,7 +104,7 @@ export function Floor() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col justify-between"
+              className="flex flex-col justify-between bg-gray-100 rounded-xl p-4 md:p-8"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -118,7 +116,7 @@ export function Floor() {
                   className="space-y-6"
                 >
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed tracking-tighter">
                     {activeRoom.description}
                   </p>
 
@@ -126,35 +124,35 @@ export function Floor() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                      <span className="text-foreground">
+                      <span className="text-foreground tracking-tighter">
                         <span className="text-muted-foreground">Rooms: </span>
                         {activeRoom.details.rooms}
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                      <span className="text-foreground">
+                      <span className="text-foreground tracking-tighter">
                         <span className="text-muted-foreground">Location: </span>
                         {activeRoom.details.location}
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                      <span className="text-foreground">
+                      <span className="text-foreground tracking-tighter">
                         <span className="text-muted-foreground">Designer: </span>
                         {activeRoom.details.designer}
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                      <span className="text-foreground">
+                      <span className="text-foreground tracking-tighter ">
                         <span className="text-muted-foreground">Available: </span>
                         {activeRoom.details.available}
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                      <span className="text-foreground">
+                      <span className="text-foreground tracking-tighter">
                         <span className="text-muted-foreground">Size: </span>
                         {activeRoom.details.size}
                       </span>
@@ -164,17 +162,17 @@ export function Floor() {
               </AnimatePresence>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-3 mt-8">
+              <div className="flex flex-row gap-2 mt-8">
                 <Button
                   asChild
-                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6"
+                  className="bg-foreground text-background hover:bg-primary rounded-full p-6 tracking-tighter"
                 >
                   <a href={floor.cta.primary.href}>{floor.cta.primary.label}</a>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-full px-6 border-foreground/20 hover:bg-muted"
+                  className="rounded-full px-6 border-foreground/20 hover:bg-muted p-6 tracking-tighter"
                 >
                   <a href={floor.cta.secondary.href}>{floor.cta.secondary.label}</a>
                 </Button>

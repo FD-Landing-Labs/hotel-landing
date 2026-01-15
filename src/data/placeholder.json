@@ -122,13 +122,13 @@
   "hero": {
     "brandName": "Grandeur",
     "description": "We help discerning travelers discover extraordinary stays with clarity—featuring curated accommodations and seamless luxury service.",
-    "image": "https://placehold.co/1920x1080/1a1a1a/c9a962?text=Luxury+Hotel+Interior",
+    "image": "/assets/images/hero.avif",
     "cta": {
       "label": "View rooms",
       "href": "#floor"
     },
     "conciergeCard": {
-      "avatar": "https://placehold.co/80x80/c9a962/1a1a1a?text=CS",
+      "avatar": "/assets/images/avatar/1.jpg",
       "smallText": "Let's help you",
       "mainText": "Talk to our concierge",
       "href": "#footer"
@@ -138,7 +138,7 @@
     "sectionLabel": "About us",
     "headline": "Our mission leads you to unforgettable stays",
     "description": "We support discerning travelers with exceptional hospitality that streamlines comfort, elevates experiences, and brings tranquility.",
-    "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Luxury+Interior",
+    "image": "/assets/images/about.png",
     "features": [
       {
         "icon": "building",
@@ -179,53 +179,53 @@
     }
   },
   "featuredPlace": {
-    "headline": "Property",
+    "headline": "Inside our spaces",
     "subtitle": "Room overview with elegant design",
     "places": [
       {
-        "id": "lobby",
-        "title": "Grand Lobby",
-        "description": "The grand lobby is the heart of the hotel—a space designed for comfort, elegance, and first impressions.",
-        "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Grand+Lobby",
-        "size": "500 m2",
-        "type": "Reception",
-        "style": "Marble"
+        "id": "bar",
+        "title": "The Grandeur Bar",
+        "description": "The bar is the social heart of the hotel—a sophisticated space designed for craft cocktails, fine spirits, and elegant evenings.",
+        "image": "/assets/images/rooms/bar.png",
+        "size": "200 m2",
+        "type": "Lounge",
+        "style": "Art Deco"
       },
       {
-        "id": "restaurant",
-        "title": "Fine Dining",
-        "description": "The restaurant serves as the hotel's centerpiece—a place crafted for exquisite cuisine and memorable evenings.",
-        "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Restaurant",
-        "size": "350 m2",
-        "type": "Dining",
-        "style": "Modern"
+        "id": "cabana",
+        "title": "Private Cabana",
+        "description": "The cabana offers exclusive poolside luxury—a secluded retreat crafted for relaxation, privacy, and personalized service.",
+        "image": "/assets/images/rooms/cabana.png",
+        "size": "50 m2",
+        "type": "Outdoor",
+        "style": "Tropical"
+      },
+      {
+        "id": "premium-deluxe",
+        "title": "Premium Deluxe Room",
+        "description": "The premium deluxe room is the epitome of comfort—a spacious retreat featuring designer furnishings, panoramic views, and bespoke amenities.",
+        "image": "/assets/images/rooms/premium.png",
+        "size": "65 m2",
+        "type": "Accommodation",
+        "style": "Contemporary"
       },
       {
         "id": "spa",
         "title": "Luxury Spa",
         "description": "The spa is a sanctuary of wellness—a tranquil space meant for relaxation, rejuvenation, and inner peace.",
-        "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Spa",
+        "image": "/assets/images/rooms/spa.png",
         "size": "400 m2",
         "type": "Wellness",
         "style": "Zen"
       },
       {
-        "id": "pool",
-        "title": "Infinity Pool",
-        "description": "The pool anchors the hotel—offering a haven for leisure, serenity, and breathtaking views.",
-        "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Pool",
-        "size": "600 m2",
-        "type": "Outdoor",
-        "style": "Azure"
-      },
-      {
-        "id": "rooftop",
-        "title": "Rooftop Bar",
-        "description": "The rooftop bar elevates your experience—designed for sunset cocktails, city views, and unforgettable nights.",
-        "image": "https://placehold.co/800x600/1a1a1a/c9a962?text=Rooftop+Bar",
-        "size": "250 m2",
-        "type": "Lounge",
-        "style": "Skyline"
+        "id": "lobby",
+        "title": "Grand Lobby",
+        "description": "The grand lobby is the heart of the hotel—a space designed for comfort, elegance, and lasting first impressions.",
+        "image": "/assets/images/rooms/lobby.png",
+        "size": "500 m2",
+        "type": "Reception",
+        "style": "Marble"
       }
     ]
   },
@@ -234,10 +234,36 @@
     "headline": "Explore every level with our detailed floor planning",
     "rooms": [
       {
+        "id": "bar",
+        "name": "The Grandeur Bar",
+        "description": "The bar is the social heart of the hotel—a sophisticated space designed for craft cocktails, fine spirits, and elegant evenings with live jazz performances.",
+        "image": "/assets/images/floor/bar.jpg",
+        "details": {
+          "rooms": "1",
+          "location": "Ground Floor, Grandeur Tower",
+          "designer": "Studio Luxe Interiors",
+          "available": "Premium Spirits, Craft Cocktails, Live Music, VIP Lounge",
+          "size": "200 sqm"
+        }
+      },
+      {
+        "id": "cabana",
+        "name": "Private Cabana",
+        "description": "The cabana offers exclusive poolside luxury—a secluded retreat crafted for relaxation, privacy, and personalized service with dedicated attendants.",
+        "image": "/assets/images/floor/cabana.jpg",
+        "details": {
+          "rooms": "1",
+          "location": "Poolside, Garden Level",
+          "designer": "Tropical Design Co.",
+          "available": "Daybed, Mini Bar, Personal Safe, Dedicated Attendant",
+          "size": "50 sqm"
+        }
+      },
+      {
         "id": "deluxe",
         "name": "Deluxe Room",
-        "description": "The deluxe room is the essence of comfort—a space designed for relaxation, style, and modern living. It typically features premium bedding, a work desk, and stunning city views.",
-        "image": "https://placehold.co/600x700/1a1a1a/c9a962?text=Deluxe+Floor+Plan",
+        "description": "The deluxe room is the essence of comfort—a space designed for relaxation, style, and modern living with premium bedding and stunning city views.",
+        "image": "/assets/images/floor/premium.png",
         "details": {
           "rooms": "1",
           "location": "Floors 5-10, Grandeur Tower",
@@ -247,42 +273,16 @@
         }
       },
       {
-        "id": "premier",
-        "name": "Premier Suite",
-        "description": "The premier suite offers spacious luxury—a haven crafted for extended stays with separate living area, panoramic views, and exclusive amenities for the discerning guest.",
-        "image": "https://placehold.co/600x700/1a1a1a/c9a962?text=Premier+Floor+Plan",
+        "id": "spa",
+        "name": "Luxury Spa",
+        "description": "The spa is a sanctuary of wellness—a tranquil space featuring thermal pools, steam rooms, and world-class treatments for complete rejuvenation and inner peace.",
+        "image": "/assets/images/floor/spa.png",
         "details": {
-          "rooms": "2",
-          "location": "Floors 11-15, Grandeur Tower",
-          "designer": "Atelier Grand Design",
-          "available": "Living Room, King Bed, Jacuzzi, Butler Service",
-          "size": "75 sqm"
-        }
-      },
-      {
-        "id": "presidential",
-        "name": "Presidential Suite",
-        "description": "The presidential suite is the pinnacle of luxury—featuring a private terrace, formal dining room, and personalized 24/7 butler service for the ultimate indulgence.",
-        "image": "https://placehold.co/600x700/1a1a1a/c9a962?text=Presidential+Floor+Plan",
-        "details": {
-          "rooms": "3",
-          "location": "Floor 20, Grandeur Tower",
-          "designer": "Royal Interiors London",
-          "available": "Master Suite, Terrace, Dining Room, Study, Butler Pantry",
-          "size": "150 sqm"
-        }
-      },
-      {
-        "id": "penthouse",
-        "name": "The Penthouse",
-        "description": "The penthouse is an exclusive sky residence—offering 360-degree views, private pool, rooftop garden, and unmatched privacy for those who seek the extraordinary.",
-        "image": "https://placehold.co/600x700/1a1a1a/c9a962?text=Penthouse+Floor+Plan",
-        "details": {
-          "rooms": "4",
-          "location": "Floor 25, Grandeur Tower",
-          "designer": "Pinnacle Architecture NYC",
-          "available": "3 Bedrooms, Private Pool, Garden, Chef Kitchen, Cinema",
-          "size": "300 sqm"
+          "rooms": "8",
+          "location": "Level B1, Wellness Wing",
+          "designer": "Zen Wellness Architecture",
+          "available": "Thermal Pools, Steam Room, Treatment Suites, Relaxation Lounge",
+          "size": "400 sqm"
         }
       }
     ],
@@ -473,21 +473,51 @@
     "navMenu": {
       "title": "Nav menu",
       "links": [
-        { "name": "Home", "href": "#hero" },
-        { "name": "Rooms", "href": "#floor" },
-        { "name": "Amenities", "href": "#why-us" },
-        { "name": "Destinations", "href": "#cities" },
-        { "name": "Testimonials", "href": "#testimonials" },
-        { "name": "Contact", "href": "#footer" }
+        {
+          "name": "Home",
+          "href": "#hero"
+        },
+        {
+          "name": "Rooms",
+          "href": "#floor"
+        },
+        {
+          "name": "Amenities",
+          "href": "#why-us"
+        },
+        {
+          "name": "Destinations",
+          "href": "#cities"
+        },
+        {
+          "name": "Testimonials",
+          "href": "#testimonials"
+        },
+        {
+          "name": "Contact",
+          "href": "#footer"
+        }
       ]
     },
     "pages": {
       "title": "Pages",
       "links": [
-        { "name": "About us", "href": "#about" },
-        { "name": "FAQ", "href": "#faq" },
-        { "name": "Privacy Policy", "href": "/privacy" },
-        { "name": "Terms", "href": "/terms" }
+        {
+          "name": "About us",
+          "href": "#about"
+        },
+        {
+          "name": "FAQ",
+          "href": "#faq"
+        },
+        {
+          "name": "Privacy Policy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms",
+          "href": "/terms"
+        }
       ]
     },
     "contact": {
@@ -502,9 +532,21 @@
       "buttonText": "Subscribe"
     },
     "socialLinks": [
-      { "name": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
-      { "name": "Facebook", "href": "https://facebook.com", "icon": "facebook" },
-      { "name": "Instagram", "href": "https://instagram.com", "icon": "instagram" }
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com",
+        "icon": "twitter"
+      },
+      {
+        "name": "Facebook",
+        "href": "https://facebook.com",
+        "icon": "facebook"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://instagram.com",
+        "icon": "instagram"
+      }
     ],
     "copyright": "2026 Grandeur Hotels & Resorts. All rights reserved."
   }
