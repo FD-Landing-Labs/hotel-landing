@@ -32,30 +32,30 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative bg-muted/50 py-20 md:py-28 lg:py-32"
+      className="relative bg-muted/90 py-20 md:py-28 lg:py-32"
     >
       <div className="container px-6 md:px-12 lg:px-16">
         {/* Main Grid - 3 columns */}
-        <div className="grid lg:grid-cols-[1fr_1.2fr_1.2fr] gap-6 lg:gap-8">
+        <div className="grid lg:grid-cols-[1fr_1.2fr_1.2fr] gap-4">
           {/* Left Column - Header */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col justify-between bg-background rounded-2xl p-8 md:p-10 border border-border/30 min-h-[400px]"
+            className="flex flex-col justify-between min-h-[400px]"
           >
             <div>
               {/* Section Label */}
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary" />
-                <span className="text-sm text-muted-foreground">
+                <span className="text-xs text-black/50 tracking-widest uppercase">
                   {testimonials.sectionLabel}
                 </span>
               </div>
 
               {/* Headline */}
-              <h2 className="font-heading text-4xl md:text-5xl font-normal leading-tight tracking-tight">
+              <h2 className="font-body text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter capitalize">
                 {testimonials.headline}
               </h2>
             </div>
@@ -66,10 +66,10 @@ export function Testimonials() {
                 onClick={handlePrev}
                 disabled={currentIndex === 0}
                 className={cn(
-                  "w-12 h-12 rounded-full border border-border flex items-center justify-center transition-all duration-200",
+                  "w-12 h-12 rounded-ull cursor-pointer border border-border flex items-center justify-center transition-all duration-200",
                   currentIndex === 0
                     ? "text-muted-foreground/40 cursor-not-allowed"
-                    : "text-foreground hover:bg-foreground hover:text-background"
+                    : "text-foreground hover:bg-primary hover:text-background"
                 )}
                 aria-label="Previous testimonials"
               >
@@ -79,10 +79,10 @@ export function Testimonials() {
                 onClick={handleNext}
                 disabled={currentIndex >= maxIndex}
                 className={cn(
-                  "w-12 h-12 rounded-full border border-border flex items-center justify-center transition-all duration-200",
+                  "w-12 h-12 rounded-ull cursor-pointer border border-border flex items-center justify-center transition-all duration-200",
                   currentIndex >= maxIndex
                     ? "text-muted-foreground/40 cursor-not-allowed"
-                    : "text-foreground hover:bg-foreground hover:text-background"
+                    : "text-foreground hover:bg-primary hover:text-background"
                 )}
                 aria-label="Next testimonials"
               >
@@ -104,7 +104,7 @@ export function Testimonials() {
                   delay: index * 0.1,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className="bg-background rounded-2xl p-8 md:p-10 border border-border/30 flex flex-col justify-between min-h-[400px]"
+                className="bg-background rounded-2l p-6 border border-border/30 flex flex-col justify-between min-h-[450px]"
               >
                 {/* Quote Mark */}
                 <div className="mb-6">
@@ -124,14 +124,14 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-foreground text-lg md:text-xl leading-relaxed flex-grow">
+                <p className="text-foreground text-lg md:text-2xl leading-snug flex-grow tracking-tighter">
                   {testimonial.quote}
                 </p>
 
                 {/* Author Info */}
                 <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border/30">
                   {/* Avatar */}
-                  <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="relative w-16 h-16 rounded-g overflow-hidden flex-shrink-0">
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}
