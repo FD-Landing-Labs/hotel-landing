@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="mt-8 inline-flex items-center justify-center w-fit px-6 py-3 bg-white text-foreground text-base capitalize font-medium rounded-full hover:bg-white/90 transition-colors tracking-tighter"
+            className="mt-8 inline-flex items-center justify-center w-fit px-6 py-3 bg-white text-foreground text-base capitalize font-medium hover:bg-primary hover:text-white transition-colors tracking-tighter"
           >
             {hero.cta.label}
           </motion.a>
@@ -62,7 +62,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="overflow-hidden"
           >
-            <h1 className="font-heading text-[clamp(4rem,15vw,14rem)] font-normal text-white leading-[0.85] tracking-tighter pb-16 lowercase">
+            <h1 className="font-heading text-[clamp(4rem,15vw,14rem)] font-normal text-white leading-[0.85] tracking-tighter">
               {hero.brandName}
             </h1>
           </motion.div>
@@ -74,10 +74,10 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
             whileHover={{ scale: 1.02 }}
-            className="hidden md:flex absolute bottom-0 right-0 items-center gap-4 bg-white p-2 pr-2 rounded-sm shadow-lg group"
+            className="hidden md:flex absolute bottom-0 right-0 items-center gap-4 bg-white p-2 pr-2 shadow-lg group"
           >
             {/* Avatar */}
-            <div className="relative w-12 h-12 rounded-sm overflow-hidden flex-shrink-0">
+            <div className="relative w-12 h-12 overflow-hidden flex-shrink-0">
               <Image
                 src={hero.conciergeCard.avatar}
                 alt="Concierge"
@@ -97,7 +97,7 @@ export function Hero() {
             </div>
 
             {/* Arrow Button */}
-            <div className="flex items-center justify-center w-10 h-10 border border-border rounded-sm group-hover:bg-foreground group-hover:text-background transition-colors">
+            <div className="flex items-center justify-center w-10 h-10 border border-border group-hover:bg-foreground group-hover:text-background transition-colors">
               <ArrowRight className="w-4 h-4" />
             </div>
           </motion.a>

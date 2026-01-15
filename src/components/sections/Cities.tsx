@@ -12,7 +12,7 @@ export function Cities() {
 
   return (
     <section id="cities" className="relative bg-background py-20 md:py-28 lg:py-32">
-      <div className="container px-6 md:px-12 lg:px-16">
+      <div className="px-6 md:px-12 lg:px-16">
         {/* Section Header - Centered */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export function Cities() {
                 delay: 0.1 + index * 0.1,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
-              className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer"
+              className="group relative aspect-[3/4] overflow-hidden cursor-pointer"
             >
               {/* Background Image */}
               <Image

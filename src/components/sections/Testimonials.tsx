@@ -34,7 +34,7 @@ export function Testimonials() {
       id="testimonials"
       className="relative bg-muted/90 py-20 md:py-28 lg:py-32"
     >
-      <div className="container px-6 md:px-12 lg:px-16">
+      <div className="px-6 md:px-12 lg:px-16">
         {/* Main Grid - 3 columns */}
         <div className="grid lg:grid-cols-[1fr_1.2fr_1.2fr] gap-4">
           {/* Left Column - Header */}

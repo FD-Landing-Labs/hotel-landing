@@ -43,11 +43,11 @@ export function Footer() {
           src={footer.cta.backgroundImage}
           alt="Luxury hotel exterior"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-black/40 to-primary/50" />
 
         {/* Content */}
         <motion.div
@@ -57,33 +57,23 @@ export function Footer() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="relative z-10 text-center px-6"
         >
-          {/* Avatar */}
-          <div className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-white/20">
-            <Image
-              src={footer.cta.avatar}
-              alt="Concierge"
-              fill
-              className="object-cover"
-            />
-          </div>
-
           {/* Headline */}
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4 max-w-lg mx-auto leading-tight">
+          <h2 className="font-body tracking-tighter capitalize text-3xl md:text-4xl lg:text-6xl font-normal text-white mb-4 max-w-md mx-auto leading-[1]">
             {footer.cta.headline}
           </h2>
 
           {/* Subtitle */}
-          <p className="text-white/80 mb-8 max-w-md mx-auto">
+          <p className="text-white/80 mb-8 max-w-sm tracking-tighter mx-auto">
             {footer.cta.subtitle}
           </p>
 
           {/* CTA Button */}
           <Button
             asChild
-            className="bg-white text-foreground hover:bg-white/90 rounded-full px-6 py-5 gap-3"
+            className="bg-white text-foreground hover:bg-white/90 rounded-none px-1.5 py-5 gap-3 text-base"
           >
-            <a href={footer.cta.buttonHref}>
-              <span className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
+            <a href={footer.cta.buttonHref} className="tracking-tighter pr-4 ">
+              <span className="w-8 h-8 bg-primary flex items-center justify-center">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
               {footer.cta.buttonLabel}
@@ -93,10 +83,10 @@ export function Footer() {
       </section>
 
       {/* Bottom Footer Section */}
-      <section className="bg-[#1a1a1a] text-white py-16 md:py-20">
-        <div className="container px-6 md:px-12 lg:px-16">
+      <section className="bg-[#1a1a1a] text-white">
+        <div className="px-6 md:px-12 lg:px-16">
           {/* Main Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-16">
             {/* Left Column - Nav Menu & Social */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -105,13 +95,13 @@ export function Footer() {
               transition={{ duration: 0.5 }}
             >
               {/* Nav Menu */}
-              <p className="text-white/50 text-sm mb-4">{footer.navMenu.title}</p>
+              <p className="text-white/50 text-xs mb-4 tracking-widest uppercase">{footer.navMenu.title}</p>
               <ul className="space-y-3 mb-10">
                 {footer.navMenu.links.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-white hover:text-primary transition-colors"
+                      className="text-white hover:text-primary transition-colors tracking-tighter text-xl font-medium"
                     >
                       {link.name}
                     </a>
@@ -120,7 +110,7 @@ export function Footer() {
               </ul>
 
               {/* Social Links */}
-              <p className="text-white/50 text-sm mb-4">Follow us</p>
+              <p className="text-white/50 text-xs mb-4 tracking-widest uppercase">Follow us</p>
               <div className="flex items-center gap-4">
                 {footer.socialLinks.map((social) => {
                   const Icon = iconMap[social.icon] || TwitterIcon;
@@ -146,9 +136,9 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="lg:border-x lg:border-white/10 lg:px-12"
+              className="lg:px-12"
             >
-              <p className="text-white/80 text-center mb-6 max-w-xs mx-auto">
+              <p className="text-white/80 text-xl text-center mb-6 max-w-xs mx-auto tracking-tighter">
                 {footer.newsletter.description}
               </p>
 
@@ -157,11 +147,11 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder={footer.newsletter.placeholder}
-                  className="flex-1 bg-transparent text-white placeholder:text-white/40 focus:outline-none py-2"
+                  className="flex-1 bg-transparent text-white placeholder:text-white/40 focus:outline-none py-2 tracking-tighter"
                 />
                 <button
                   type="submit"
-                  className="text-white hover:text-primary transition-colors font-medium"
+                  className="text-white cursor-pointer hover:text-primary transition-colors tracking-tighter text-lg font-medium"
                 >
                   {footer.newsletter.buttonText}
                 </button>
@@ -177,13 +167,13 @@ export function Footer() {
               className="text-right"
             >
               {/* Pages */}
-              <p className="text-white/50 text-sm mb-4">{footer.pages.title}</p>
+              <p className="text-white/50 text-xs mb-4 tracking-widest uppercase">{footer.pages.title}</p>
               <ul className="space-y-3 mb-10">
                 {footer.pages.links.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-white hover:text-primary transition-colors"
+                      className="text-white hover:text-primary transition-colors tracking-tighter text-xl font-medium"
                     >
                       {link.name}
                     </a>
@@ -192,11 +182,11 @@ export function Footer() {
               </ul>
 
               {/* Contact */}
-              <p className="text-white/50 text-sm mb-4">{footer.contact.title}</p>
+              <p className="text-white/50 text-xs mb-4 tracking-widest uppercase">{footer.contact.title}</p>
               <div className="space-y-2">
-                <p className="text-white">{footer.contact.phone}</p>
-                <p className="text-white">{footer.contact.email}</p>
-                <p className="text-white/70 text-sm">{footer.contact.address}</p>
+                <p className="text-white tracking-tighter text-xl font-medium">{footer.contact.phone}</p>
+                <p className="text-white tracking-tighter text-xl font-medium">{footer.contact.email}</p>
+                <p className="text-white/70 text-sm tracking-tighter">{footer.contact.address}</p>
               </div>
             </motion.div>
           </div>
@@ -210,9 +200,9 @@ export function Footer() {
             className="relative overflow-hidden"
           >
             <h2
-              className="font-heading text-[80px] sm:text-[120px] md:text-[160px] lg:text-[200px] xl:text-[240px] font-normal text-center leading-none tracking-tight select-none"
+              className="font-heading text-[80px] sm:text-[120px] md:text-[160px] lg:text-[200px] xl:text-[340px] font-normal text-center leading-none tracking-tighter select-none"
               style={{
-                background: "linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%)",
+                background: "linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(26,26,26, 1) 90%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

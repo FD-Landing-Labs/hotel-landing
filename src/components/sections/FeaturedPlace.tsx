@@ -99,7 +99,7 @@ function PlaceCard({ place, index, totalCards }: PlaceCardProps) {
           delay: index * 0.1,
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
-        className="bg-gray-50 border-6 border-white rounded-[2rem] overflow-hidden shadow-lg shadow-black/5"
+        className="bg-gray-50 border-6 border-white overflow-hidden shadow-lg shadow-black/5"
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0">
           {/* Left Column - Content */}
@@ -117,21 +117,21 @@ function PlaceCard({ place, index, totalCards }: PlaceCardProps) {
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-4 mt-8 pt-8">
+            <div className="flex flex-wrap gap-2 mt-8 pt-8">
               {/* Size Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1">
                 <LayoutGrid className="w-4 h-4" strokeWidth={1.5} />
                 <span className="tracking-tighter">{place.size}</span>
               </div>
 
               {/* Type Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1">
                 <Bed className="w-4 h-4" strokeWidth={1.5} />
                 <span className="tracking-tighter">{place.type}</span>
               </div>
 
               {/* Style Tag */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1 rounded-full">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-black/5 px-2.5 py-1">
                 <Heart className="w-4 h-4" strokeWidth={1.5} />
                 <span className="tracking-tighter">{place.style}</span>
               </div>

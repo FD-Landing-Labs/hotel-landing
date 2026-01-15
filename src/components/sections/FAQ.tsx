@@ -23,13 +23,8 @@ export function FAQ() {
   return (
     <section id="faq" className="relative">
       {/* Two-column background */}
-      <div className="absolute inset-0 grid lg:grid-cols-2">
-        <div className="bg-background" />
-        <div className="bg-muted/50" />
-      </div>
-
-      <div className="container relative px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32">
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16">
+      <div className="relative px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32">
+        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Left Column - Header & Contact Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -43,16 +38,16 @@ export function FAQ() {
               {/* Section Label with Line */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" />
-                  <span className="text-sm text-muted-foreground">
+                  <span className="w-2 h-2 bg-primary" />
+                  <span className="text-xs text-black/50 tracking-widest uppercase">
                     {faq.sectionLabel}
                   </span>
                 </div>
-                <div className="flex-1 h-px bg-border" />
+                {/* <div className="flex-1 h-px bg-border" /> */}
               </div>
 
               {/* Headline */}
-              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight">
+              <h2 className="font-body text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter capitalize">
                 {faq.headline}
               </h2>
             </div>
@@ -60,17 +55,17 @@ export function FAQ() {
             {/* Contact Card - Bottom */}
             <div className="mt-12 lg:mt-0">
               {/* Image */}
-              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden mb-4">
+              {/* <div className="relative w-24 h-24 overflow-hidden mb-4">
                 <Image
                   src={faq.contactCard.image}
                   alt="Our concierge team"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Text */}
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 max-w-xs">
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed tracking-tighter mb-4 max-w-xs">
                 {faq.contactCard.text}
               </p>
 
@@ -78,7 +73,7 @@ export function FAQ() {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-full px-6 border-foreground/20 hover:bg-foreground hover:text-background transition-colors"
+                className="rounded-none p-6 border-foreground hover:bg-primary hover:border-primary tracking-tighter capitalize hover:text-background transition-colors"
               >
                 <a href={faq.contactCard.cta.href}>{faq.contactCard.cta.label}</a>
               </Button>
@@ -91,7 +86,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="space-y-0"
+            className="space-y-0 md:space-y-2 lg:col-span-2"
           >
             {faq.items.map((item, index) => {
               const isOpen = openItems.includes(item.id);
@@ -106,17 +101,17 @@ export function FAQ() {
                   {/* Question Button */}
                   <button
                     onClick={() => toggleItem(item.id)}
-                    className="w-full py-6 flex items-start justify-between gap-4 text-left group"
+                    className="w-full cursor-pointer py-6 flex items-start justify-between gap-4 text-left group"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-heading text-lg md:text-xl font-normal text-foreground pr-4">
+                    <span className="font-body text-lg md:text-xl font-medium text-foreground pr-4 tracking-tighter">
                       {item.question}
                     </span>
                     <span
                       className={cn(
-                        "w-10 h-10 rounded-full border border-border/50 flex items-center justify-center flex-shrink-0 transition-all duration-200",
+                        "w-10 h-10 border border-border/50 flex items-center justify-center flex-shrink-0 transition-all duration-200",
                         isOpen
-                          ? "bg-foreground text-background border-foreground"
+                          ? "bg-primary text-background"
                           : "bg-transparent text-foreground group-hover:border-foreground"
                       )}
                     >
@@ -138,7 +133,7 @@ export function FAQ() {
                         transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-6 text-muted-foreground leading-relaxed pr-14">
+                        <p className="pb-6 text-muted-foreground leading-relaxed pr-14 tracking-tighter text-base">
                           {item.answer}
                         </p>
                       </motion.div>

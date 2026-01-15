@@ -1,16 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLenis } from "@/lib/useLenis";
 import placeholderData from "@/data/placeholder.json";
+import Image from "next/image";
 
 const { navbar } = placeholderData;
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const lenis = useLenis();
 
   // Handle scroll for navbar background
   useEffect(() => {
@@ -42,6 +45,16 @@ export function Navbar() {
     { name: "Contact", href: "#footer" },
   ];
 
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    // Small delay to allow menu to close before scrolling
+    setTimeout(() => {
+      lenis?.scrollTo(href, { offset: -20, duration: 1.2 });
+    }, 100);
+  }, [lenis]);
+
   return (
     <>
       {/* Main Navigation Bar - Floating Pill */}
@@ -49,32 +62,23 @@ export function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 max-w-md mx-auto"
+        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 max-w-lg mx-auto"
       >
         <nav
           className={cn(
-            "flex items-center justify-between px-6 md:px-8 py-3 rounded-full transition-all duration-300",
+            "flex items-center justify-between px-4 py-3 transition-all duration-300",
             "bg-white/95 backdrop-blur-md border border-border/50 shadow-lg shadow-black/5"
           )}
         >
           {/* Logo */}
-          <a href="#hero" className="flex items-center">
-            <svg
-              width="40"
-              height="24"
-              viewBox="0 0 40 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-primary"
-            >
-              <path
-                d="M8 6C8 6 4 10 4 12C4 14 6 16 8 16C10 16 12 14 12 12C12 10 10 8 12 6C14 4 18 4 20 6C22 8 20 12 20 12C20 12 18 16 20 18C22 20 26 20 28 18C30 16 28 12 28 12C28 12 26 8 28 6C30 4 34 4 36 6"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
+          <a href="#hero" onClick={(e) => handleNavClick(e, "#hero")} className="flex items-center">
+            <Image
+              src={navbar.logo.default}
+              alt={navbar.logo.alt}
+              width={150}
+              height={150}
+              className="w-auto h-8 md:h-12"
+            />
           </a>
 
 
@@ -147,7 +151,7 @@ export function Navbar() {
                       >
                         <a
                           href={link.href}
-                          onClick={() => setIsMenuOpen(false)}
+                          onClick={(e) => handleNavClick(e, link.href)}
                           className="group block py-2"
                         >
                           <span className="text-3xl md:text-4xl tracking-tighter font-medium text-white/90 group-hover:text-primary transition-colors duration-200">

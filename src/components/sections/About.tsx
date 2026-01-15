@@ -18,7 +18,7 @@ export function About() {
     <section id="about" className="relative">
       {/* Top Section - Two Column Layout */}
       <div className="bg-background py-20 md:py-28 lg:py-32">
-        <div className="container px-6 md:px-12 lg:px-16">
+        <div className="px-6 md:px-12 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <motion.div
@@ -114,7 +114,7 @@ export function About() {
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="bg-[#1a1a1a] py-16 md:py-20"
       >
-        <div className="container px-6 md:px-12 lg:px-16">
+        <div className="px-6 md:px-12 lg:px-16">
           {/* Stats Header */}
           <div className="text-center mb-16">
             {/* Label */}
