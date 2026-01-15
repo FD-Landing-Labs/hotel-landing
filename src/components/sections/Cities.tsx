@@ -26,7 +26,7 @@ export function Cities() {
             <div className="flex-1 h-px bg-border max-w-[200px]" />
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-sm text-muted-foreground">
+              <span className="text-xs text-black/50 tracking-widest uppercase">
                 {cities.sectionLabel}
               </span>
             </div>
@@ -34,12 +34,12 @@ export function Cities() {
           </div>
 
           {/* Headline */}
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-4">
+          <h2 className="font-body text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter capitalize mb-4">
             {cities.headline}
           </h2>
 
           {/* Description */}
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed tracking-tighter">
             {cities.description}
           </p>
         </motion.div>
@@ -73,12 +73,12 @@ export function Cities() {
               {/* Content - Bottom */}
               <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
                 {/* City Name */}
-                <h3 className="font-heading text-xl md:text-2xl font-normal text-white mb-1">
+                <h3 className="font-body text-xl md:text-3xl tracking-tighter font-normal text-white mb-1">
                   {location.city}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
+                <p className="text-white/70 text-sm line-clamp-2 leading-snug tracking-tighter">
                   {location.description}
                 </p>
               </div>
