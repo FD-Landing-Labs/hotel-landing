@@ -49,7 +49,7 @@ export function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4"
+        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 max-w-lg mx-auto"
       >
         <nav
           className={cn(
@@ -77,18 +77,6 @@ export function Navbar() {
             </svg>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navbar.barLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
 
           {/* Menu Button */}
           <button
@@ -101,7 +89,7 @@ export function Navbar() {
               <span className="w-5 h-[2px] bg-foreground rounded-full transition-all duration-200 group-hover:w-6" />
               <span className="w-5 h-[2px] bg-foreground rounded-full transition-all duration-200 group-hover:w-4" />
             </div>
-            <span className="text-sm font-medium text-foreground hidden sm:block">
+            <span className="text-base tracking-tighter font-medium text-foreground hidden sm:block">
               Menu
             </span>
           </button>
@@ -162,7 +150,7 @@ export function Navbar() {
                           onClick={() => setIsMenuOpen(false)}
                           className="group block py-2"
                         >
-                          <span className="text-3xl md:text-4xl font-medium text-white/90 group-hover:text-primary transition-colors duration-200">
+                          <span className="text-3xl md:text-4xl tracking-tighter font-medium text-white/90 group-hover:text-primary transition-colors duration-200">
                             {link.name}
                           </span>
                         </a>

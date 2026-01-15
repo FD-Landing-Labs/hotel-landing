@@ -35,7 +35,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="flex-1 flex flex-col justify-center max-w-xl"
         >
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed font-light">
+          <p className="text-white/90 text-lg md:text-2xl leading-snug tracking-tighter font-light">
             {hero.description}
           </p>
 
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="mt-8 inline-flex items-center justify-center w-fit px-6 py-3 bg-white text-foreground text-sm font-medium rounded-full hover:bg-white/90 transition-colors"
+            className="mt-8 inline-flex items-center justify-center w-fit px-6 py-3 bg-white text-foreground text-base capitalize font-medium rounded-full hover:bg-white/90 transition-colors tracking-tighter"
           >
             {hero.cta.label}
           </motion.a>
@@ -62,7 +62,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="overflow-hidden"
           >
-            <h1 className="font-heading text-[clamp(4rem,15vw,14rem)] font-normal text-white leading-[0.85] tracking-tight lowercase">
+            <h1 className="font-heading text-[clamp(4rem,15vw,14rem)] font-normal text-white leading-[0.85] tracking-tighter pb-16 lowercase">
               {hero.brandName}
             </h1>
           </motion.div>
@@ -74,7 +74,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
             whileHover={{ scale: 1.02 }}
-            className="absolute bottom-0 right-0 flex items-center gap-4 bg-white p-3 pr-4 rounded-sm shadow-lg group"
+            className="hidden md:flex absolute bottom-0 right-0 items-center gap-4 bg-white p-2 pr-2 rounded-sm shadow-lg group"
           >
             {/* Avatar */}
             <div className="relative w-12 h-12 rounded-sm overflow-hidden flex-shrink-0">
@@ -88,10 +88,10 @@ export function Hero() {
 
             {/* Text Content */}
             <div className="flex-1">
-              <p className="text-xs text-muted-foreground">
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
                 {hero.conciergeCard.smallText}
               </p>
-              <p className="text-sm font-medium text-foreground">
+              <p className="text-sm font-medium text-foreground tracking-tighter">
                 {hero.conciergeCard.mainText}
               </p>
             </div>
